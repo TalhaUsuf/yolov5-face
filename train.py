@@ -327,8 +327,13 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
         lr = [x['lr'] for x in optimizer.param_groups]  # for tensorboard
         scheduler.step()
 
+
+        # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        #                    ⚡ actual saving happens here ⚡
+        # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
         # DDP process 0 or single-GPU
-        if rank in [-1, 0] and epoch > 20:
+        if rank in [-1, 0] and epoch > 0:
             # mAP
             if ema:
                 ema.update_attr(model, include=['yaml', 'nc', 'hyp', 'gr', 'names', 'stride', 'class_weights'])

@@ -4,3 +4,7 @@
 dataset
 __pycache__
 dataset
+YOLOFACE
+wandb
+runs/*
+wandb/*
