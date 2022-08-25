@@ -1,0 +1,57 @@
+diff --git a/.gitignore b/.gitignore
+index f22bfe4..d937ac4 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,3 +1,4 @@
+ */__pycache__
+ .idea/
+-*.pt
+\ No newline at end of file
++*.pt
++dataset
+\ No newline at end of file
+diff --git a/README.md b/README.md
+index 8f0757a..3b7229c 100755
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,11 @@
++# Password 🔒 
++```bash
++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
++```
++
++
++
++
+ ## What's New
+ 
+ **2022.8**: yolov7
+diff --git a/data/train2yolo.py b/data/train2yolo.py
+index 89be1e4..0ee5051 100644
+--- a/data/train2yolo.py
++++ b/data/train2yolo.py
+@@ -4,8 +4,8 @@ import torch
+ import torch.utils.data as data
+ import cv2
+ import numpy as np
+-
+-
++from rich.console import Console
++from tqdm import trange
+ class WiderFaceDetection(data.Dataset):
+     def __init__(self, txt_path, preproc=None):
+         self.preproc = preproc
+@@ -128,9 +128,10 @@ if __name__ == '__main__':
+         exit(1)
+ 
+     aa = WiderFaceDetection(os.path.join(original_path, 'label.txt'))
+-
+-    for i in range(len(aa.imgs_path)):
+-        print(i, aa.imgs_path[i])
++    Console().print(f"total images:  :zap: {len(aa.imgs_path)}")
++    # Console().print([f for f in aa.imgs_path])
++    for i in trange(len(aa.imgs_path), colour="green"):
++        # print(i, aa.imgs_path[i])
+         img = cv2.imread(aa.imgs_path[i])
+         base_img = os.path.basename(aa.imgs_path[i])
+         base_txt = os.path.basename(aa.imgs_path[i])[:-4] + ".txt"

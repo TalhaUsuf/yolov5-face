@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/talha/oneTB/yolov5-face/utils/face_datasets.py", line 140, in __init__
+    raise Exception('%s does not exist' % p)
+Exception: /ssd_1t/derron/yolov5-face/data/widerface/train does not exist
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/talha/oneTB/yolov5-face/train.py", line 512, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "/home/talha/oneTB/yolov5-face/train.py", line 187, in train
+    dataloader, dataset = create_dataloader(train_path, imgsz, batch_size, gs, opt,
+  File "/home/talha/oneTB/yolov5-face/utils/face_datasets.py", line 62, in create_dataloader
+    dataset = LoadFaceImagesAndLabels(path, imgsz, batch_size,
+  File "/home/talha/oneTB/yolov5-face/utils/face_datasets.py", line 144, in __init__
+    raise Exception('Error loading data from %s: %s\nSee %s' % (path, e, help_url))
+Exception: Error loading data from /ssd_1t/derron/yolov5-face/data/widerface/train: /ssd_1t/derron/yolov5-face/data/widerface/train does not exist
+See https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data

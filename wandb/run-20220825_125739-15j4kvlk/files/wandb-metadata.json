@@ -1,0 +1,31 @@
+{
+    "os": "Linux-5.4.0-104-generic-x86_64-with-glibc2.27",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-08-25T07:57:41.516413",
+    "startedAt": "2022-08-25T07:57:39.405452",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--data",
+        "data/widerface.yaml",
+        "--cfg",
+        "models/yolov5s.yaml",
+        "--weights",
+        "pretrained models"
+    ],
+    "state": "running",
+    "program": "/home/talha/oneTB/yolov5-face/train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/TalhaUsuf/yolov5-face.git",
+        "commit": "90c10811b053cdc3524f2e438b444cfaed3d4908"
+    },
+    "email": "talha.yousuf@stech.ai",
+    "root": "/home/talha/oneTB/yolov5-face",
+    "host": "Talha-System-PC",
+    "username": "talha",
+    "executable": "/home/talha/anaconda3/envs/cuda_latest/bin/python3"
+}
