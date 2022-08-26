@@ -2,13 +2,13 @@
 import argparse
 import time
 from pathlib import Path
-
+from tqdm import tqdm
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
 from numpy import random
 import copy
-
+from rich.console import Console
 from models.experimental import attempt_load
 from utils.datasets import letterbox
 from utils.general import check_img_size, non_max_suppression_face, apply_classifier, scale_coords, xyxy2xywh, \
@@ -70,19 +70,16 @@ def show_results(img, xyxy, conf, landmarks, class_num):
 
 
 
-def detect_one(model, image_path, device):
-    # Load model
-    img_size = 800
-    conf_thres = 0.3
-    iou_thres = 0.5
-
+def process(image_path, img_size, conf_thres, iou_thres, device, folder=False):
+    folder_to_save = Path(image_path).parents[0]
+    name = Path(image_path).name
     orgimg = cv2.imread(image_path)  # BGR
     img0 = copy.deepcopy(orgimg)
     assert orgimg is not None, 'Image Not Found ' + image_path
     h0, w0 = orgimg.shape[:2]  # orig hw
     r = img_size / max(h0, w0)  # resize image to img_size
     if r != 1:  # always resize down, only resize up if training with augmentation
-        interp = cv2.INTER_AREA if r < 1  else cv2.INTER_LINEAR
+        interp = cv2.INTER_AREA if r < 1 else cv2.INTER_LINEAR
         img0 = cv2.resize(img0, (int(w0 * r), int(h0 * r)), interpolation=interp)
 
     imgsz = check_img_size(img_size, s=model.stride.max())  # check img_size
@@ -128,10 +125,37 @@ def detect_one(model, image_path, device):
                 landmarks = det[j, 5:15].view(-1).tolist()
                 class_num = det[j, 15].cpu().numpy()
                 orgimg = show_results(orgimg, xyxy, conf, landmarks, class_num)
+    if not folder:
+        cv2.imwrite('result.jpg', orgimg)
+    elif folder:
+        cv2.imwrite(folder_to_save.as_posix() + "/result_" + str(name), orgimg)
 
-    cv2.imwrite('result.jpg', orgimg)
 
 
+
+def detect_one(model, image_path, device):
+    # Load model
+    img_size = 800
+    conf_thres = 0.5
+    iou_thres = 0.5
+
+    if opt.folder:
+        Console().print(f"[red]processing folder :open_file_folder:")
+        images = list(Path(image_path).iterdir())
+        for img in tqdm(images, total=len(images), colour="green", desc="Processing"):
+            process(img.as_posix(), img_size, conf_thres, iou_thres, device, folder=True)
+    else:
+        # if single image path is given, process it directly
+        Console().print(f"flag values :fire: {opt.folder}")
+        process(image_path, img_size, conf_thres, iou_thres, device, folder=False)
+
+
+def add_bool_arg(parser, name, help_, default=False):
+    group = parser.add_mutually_exclusive_group(required=False)
+    group.add_argument('--' + name, dest=name, action='store_true', help=help_)
+    group.add_argument('--no-' + name, dest=name, action='store_false')
+    parser.set_defaults(**{name:default})
+    return parser
 
 
 if __name__ == '__main__':
@@ -139,6 +163,7 @@ if __name__ == '__main__':
     parser.add_argument('--weights', nargs='+', type=str, default='runs/train/exp5/weights/last.pt', help='model.pt path(s)')
     parser.add_argument('--image', type=str, default='data/images/test.jpg', help='source')  # file/folder, 0 for webcam
     parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
+    parser = add_bool_arg(parser, 'folder', 'give this flag if inference needs to be performed over a folder containing images 🎞')
     opt = parser.parse_args()
     print(opt)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
