@@ -372,7 +372,8 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                 best_fitness = fi
 
             # Save model
-            save = (not opt.nosave) or (final_epoch and not opt.evolve)
+            # save = (not opt.nosave) or (final_epoch and not opt.evolve)
+            save = True
             if save:
                 with open(results_file, 'r') as f:  # create checkpoint
                     ckpt = {'epoch': epoch,
@@ -383,6 +384,7 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                             'wandb_id': wandb_run.id if wandb else None}
 
                 # Save last, best and delete
+                torch.save(ckpt, Path(wdir, f"epoch{epoch}.pt"))
                 torch.save(ckpt, last)
                 if best_fitness == fi:
                     torch.save(ckpt, best)

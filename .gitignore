@@ -8,3 +8,4 @@ YOLOFACE
 wandb
 runs/*
 wandb/*
+/wandb/
