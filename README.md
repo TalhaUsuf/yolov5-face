@@ -1,10 +1,71 @@
-# Password 🔒 
+# Password 🔒
+
 ```bash
 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
 ```
 
+# For custom training ⚙
+
+1. [yolov5n-0.5 is the smallest model](models/yolov5n-0.5.yaml)
+2. [this hyperparameters :spiral_notepad: file for finetuning](data/hyp.finetune.yaml)
+    - this will re-compute anchor points according to the dataset given
+    - for image size `300x300` this has poor performance
+3. [this hyperparameters :spiral_notepad: file for scratch :zap: training](data/hyp.scratch.yaml)
+
+## Dataset 💾 preparation
+
+| -                      |train|val|test | annotations                      |
+|:-----------------------|:---:|:---:|:---:|----------------------------------|
+| original dataset       |`dataset/WIDER_train.zip` | `dataset/WIDER_val.zip` |`dataset/WIDER_test.zip` | `dataset/retinaface_gt_v1.1.zip` |
+| extracted annotations* |`dataset/train`|`dataset/val`|`dataset/test`| `./`                             |
+
+> Note: *extracted annotations are in `./`
+
+there should be `train`, `test`, `val` folders after extractions of annotations. Each of them must
+have following structure. *manually move the relevant images folder after extraction of wider face dataset splits into annotation train, val, test folders*
+```bash
+.
+├── images
+│   ├── 0--Parade
+│   ├── 10--People_Marching
+│   ├── 11--Meeting
+│   ├── 12--Group
+│   ├......
+│   ├......
+│   ├......
+│   ├......
+│   ├── 8--Election_Campain
+│   └── 9--Press_Conference
+└── label.txt
+
+```
+
+for annotation generation:
+
+```bash
+.
+├── retinaface_gt_v1.1.zip
+├── test (annotations extracted)
+├── train (annotations extracted)
+├── TRAIN (manually made to store yolo format annotations)
+├── val (annotations extracted)
+├── VAL (manually made to store yolo format annotations)
+├── WIDER_test.zip
+├── WIDER_train.zip
+└── WIDER_val.zip
+```
+convert the annotations 📚 to yolo format 
+```bash
+python data/train2yolo.py dataset/train dataset/TRAIN
+python data/val2yolo.py dataset/val dataset/VAL
+```
+
+after above operations `dataset/TRAIN` and `dataset/VAL` folders will get populated. 
 
 
+```bash
+CUDA_VISIBLE_DEVICES="0,1" python train.py --data data/widerface.yaml --cfg models/yolov5n6.yaml --weights "pretrained models" --epochs 50 --batch-size 60 --log-artifacts --log-imgs 16 --project YOLOFACE --hyp data/hyp.finetune.yaml --img-size 300 --workers 6
+```
 
 ## What's New
 
@@ -15,8 +76,7 @@ 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
 | yolov7-tiny    | 94.0  | 92.3   | 83.2  | 4.960          | -     |
 | yolov7         | -     | -      | -     | 36.946         | -     |
 
-
-**2021.12**: Yolov5-face to TensorRT. 
+**2021.12**: Yolov5-face to TensorRT.
 
 |   Backbone   | Pytorch(ms) | TensorRT_FP16(ms) |
 | :----------: | :---------: | :---------------: |
@@ -26,7 +86,7 @@ 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
 | yolov5m-face |     9.9     |        3.3        |
 | yolov5l-face |    15.9     |        4.5        |
 
-> Pytorch=1.10.0+cu102    TensorRT=8.2.0.6   Hardware=rtx2080ti
+> Pytorch=1.10.0+cu102 TensorRT=8.2.0.6 Hardware=rtx2080ti
 
 **2021.11**: BlazeFace
 
@@ -37,14 +97,14 @@ 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
 | yolov5-blazeface     | True        | 90.4  | 88.7   | 78.0  | 0.493          | https://pan.baidu.com/s/1RHp8wa615OuDVhsO-qrMpQ pwd:r3v3 https://drive.google.com/file/d/1adi6ke2vCLQFcpbvFqWo_J4wZIfPqSMG|
 | yolov5-blazeface-fpn | True        | 90.8  | 89.4   | 79.1  | 0.493          |  -    |
 
-
-**2021.08**: Add new training dataset [Multi-Task-Facial](https://drive.google.com/file/d/1Pwd6ga06cDjeOX20RSC1KWiT888Q9IpM/view?usp=sharing),improve large face detection.
+**2021.08**: Add new training
+dataset [Multi-Task-Facial](https://drive.google.com/file/d/1Pwd6ga06cDjeOX20RSC1KWiT888Q9IpM/view?usp=sharing),improve
+large face detection.
 
 | Method               | Easy  | Medium | Hard  | 
 | -------------------- | ----- | ------ | ----- |
 | ***YOLOv5s***        | 94.56 | 92.92  | 83.84 |
 | ***YOLOv5m***        | 95.46 | 93.87  | 85.54 |
-
 
 ## Introduction
 
@@ -74,7 +134,6 @@ Single Scale Inference on VGA resolution（max side is equal to 640 and scale).
 | ***YOLOv5l***       | CSPNet         | 95.78 | 94.30  | 86.13 | 46.627      | 41.607     |
 | ***YOLOv5l6***      | CSPNet         | 96.38 | 94.90  | 85.88 | 76.674      | 45.279     |
 
-
 ***Small family***
 
 | Method               | Backbone        | Easy  | Medium | Hard  | \#Params(M) | \#Flops(G) |
@@ -86,8 +145,6 @@ Single Scale Inference on VGA resolution（max side is equal to 640 and scale).
 | -                    | -               | -     | -      | -     | -           | -          |
 | ***YOLOv5n***        | ShuffleNetv2    | 93.74 | 91.54  | 80.32 | 1.726       | 2.111      |
 | ***YOLOv5n-0.5***    | ShuffleNetv2    | 90.76 | 88.12  | 73.82 | 0.447       | 0.571      |
-
-
 
 ## Pretrained-Models
 
@@ -102,7 +159,8 @@ Single Scale Inference on VGA resolution（max side is equal to 640 and scale).
 ## Data preparation
 
 1. Download WIDERFace datasets.
-2. Download annotation files from [google drive](https://drive.google.com/file/d/1tU_IjyOwGQfGNUvZGwWWM4SwxKp2PUQ8/view?usp=sharing).
+2. Download annotation files
+   from [google drive](https://drive.google.com/file/d/1tU_IjyOwGQfGNUvZGwWWM4SwxKp2PUQ8/view?usp=sharing).
 
 ```shell
 cd data
@@ -110,15 +168,11 @@ python3 train2yolo.py /path/to/original/widerface/train [/path/to/save/widerface
 python3 val2yolo.py  /path/to/original/widerface [/path/to/save/widerface/val]
 ```
 
-
-
 ## Training
 
 ```shell
 CUDA_VISIBLE_DEVICES="0,1,2,3" python3 train.py --data data/widerface.yaml --cfg models/yolov5s.yaml --weights 'pretrained models'
 ```
-
-
 
 ## WIDERFace Evaluation
 
@@ -133,12 +187,12 @@ python3 evaluation.py
 
 ![](data/images/result.jpg)
 
-#### Landmark Visulization 
+#### Landmark Visulization
 
 ![](data/images/landmark.png)
-First row: RetinaFace, 2nd row: YOLOv5m-Face 
-**YOLO5Face was used in the 3rd place standard face recogntion track of the [ICCV2021 Masked Face Recognition Chanllenge](https://www.face-benchmark.org/challenge.html).** 
-
+First row: RetinaFace, 2nd row: YOLOv5m-Face
+**YOLO5Face was used in the 3rd place standard face recogntion track of
+the [ICCV2021 Masked Face Recognition Chanllenge](https://www.face-benchmark.org/challenge.html).**
 
 #### Android demo
 
@@ -170,9 +224,9 @@ https://github.com/biubug6/Pytorch_Retinaface
 
 https://github.com/deepinsight/insightface
 
+#### Citation
 
-#### Citation 
-- If you think this work is useful for you, please cite 
+- If you think this work is useful for you, please cite
 
       @article{YOLO5Face,
       title = {YOLO5Face: Why Reinventing a Face Detector},
@@ -182,9 +236,10 @@ https://github.com/deepinsight/insightface
       }
 
 #### Main Contributors
-https://github.com/derronqi  
 
-https://github.com/changhy666 
+https://github.com/derronqi
+
+https://github.com/changhy666
 
 https://github.com/bobo0810 
 
