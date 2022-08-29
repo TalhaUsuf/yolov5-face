@@ -1,8 +1,4 @@
-# Password 🔒
 
-```bash
-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
-```
 
 # For custom training ⚙
 
@@ -66,6 +62,15 @@ after above operations `dataset/TRAIN` and `dataset/VAL` folders will get popula
 ```bash
 CUDA_VISIBLE_DEVICES="0,1" python train.py --data data/widerface.yaml --cfg models/yolov5n6.yaml --weights "pretrained models" --epochs 50 --batch-size 60 --log-artifacts --log-imgs 16 --project YOLOFACE --hyp data/hyp.finetune.yaml --img-size 300 --workers 6
 ```
+
+for inference on images folder, do this:
+```bash
+python detect_face.py  --weights YOLOFACE/exp6/weights/best.pt  --image "/home/talha/Pictures/test_face_landmarks_dataset/200 user images and list-20220826T121723Z-001/200 user images and list"   --img-size 800   --folder
+```
+> *remove the --folder flag to give path of an image*
+
+
+
 
 ## What's New
 
