@@ -15,10 +15,12 @@ converter = tf.lite.TFLiteConverter.from_saved_model("/home/talha/oneTB/yolov5-f
 converter.optimizations = [tf.lite.Optimize.DEFAULT]
 # converter target device
 converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS]
+# convert to fp16
+converter.target_spec.supported_types = [tf.float16]
 tflite_model = converter.convert()
 
 # Save the tflite model
-with open("best_simplified.tflite", "wb") as f:
+with open("best_simplified_fp16.tflite", "wb") as f:
     f.write(tflite_model)
 
 
