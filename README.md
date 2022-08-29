@@ -71,6 +71,17 @@ python detect_face.py  --weights YOLOFACE/exp6/weights/best.pt  --image "/home/t
 
 
 
+# conversion from torch to tflite 🧷
+
+ - use [this](export.py) file 🗒 to convert from torch to onnx
+ - use `pip install onnx-tf` to install onnx-tf
+    ```bash
+    onnx-tf convert  -i  /home/talha/oneTB/yolov5-face/YOLOFACE/exp6/weights/best_simplified.onnx -o /home/talha/oneTB/yolov5-face/YOLOFACE/exp6/weights/best_simplified.pb
+    ```
+
+
+
+
 
 ## What's New
 
