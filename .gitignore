@@ -9,3 +9,6 @@ wandb
 runs/*
 wandb/*
 /wandb/
+
+!/sclblonnx/
+/sclblonnx/
