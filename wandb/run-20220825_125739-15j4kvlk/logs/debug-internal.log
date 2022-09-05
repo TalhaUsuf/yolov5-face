@@ -1,0 +1,202 @@
+2022-08-25 12:57:39,503 INFO    StreamThr :25335 [internal.py:wandb_internal():90] W&B internal server running at pid: 25335, started at: 2022-08-25 12:57:39.502728
+2022-08-25 12:57:39,504 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: status
+2022-08-25 12:57:39,505 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: status
+2022-08-25 12:57:39,506 INFO    WriterThread:25335 [datastore.py:open_for_write():75] open: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/run-15j4kvlk.wandb
+2022-08-25 12:57:39,506 DEBUG   SenderThread:25335 [sender.py:send():302] send: header
+2022-08-25 12:57:39,506 DEBUG   SenderThread:25335 [sender.py:send():302] send: run
+2022-08-25 12:57:39,513 INFO    SenderThread:25335 [sender.py:_maybe_setup_resume():578] checking resume status for None/YOLOv5/15j4kvlk
+2022-08-25 12:57:40,705 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: check_version
+2022-08-25 12:57:40,717 INFO    SenderThread:25335 [dir_watcher.py:__init__():216] watching files in: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files
+2022-08-25 12:57:40,718 INFO    SenderThread:25335 [sender.py:_start_run_threads():913] run started: 15j4kvlk with start time 1661414259.469482
+2022-08-25 12:57:40,718 DEBUG   SenderThread:25335 [sender.py:send():302] send: summary
+2022-08-25 12:57:40,719 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-08-25 12:57:40,720 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: check_version
+2022-08-25 12:57:41,466 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: run_start
+2022-08-25 12:57:41,515 DEBUG   HandlerThread:25335 [meta.py:__init__():35] meta init
+2022-08-25 12:57:41,516 DEBUG   HandlerThread:25335 [meta.py:__init__():50] meta init done
+2022-08-25 12:57:41,516 DEBUG   HandlerThread:25335 [meta.py:probe():216] probe
+2022-08-25 12:57:41,524 DEBUG   HandlerThread:25335 [meta.py:_setup_git():206] setup git
+2022-08-25 12:57:41,547 DEBUG   HandlerThread:25335 [meta.py:_setup_git():213] setup git done
+2022-08-25 12:57:41,547 DEBUG   HandlerThread:25335 [meta.py:_save_code():88] save code
+2022-08-25 12:57:41,557 DEBUG   HandlerThread:25335 [meta.py:_save_code():109] save code done
+2022-08-25 12:57:41,557 DEBUG   HandlerThread:25335 [meta.py:_save_patches():126] save patches
+2022-08-25 12:57:41,617 DEBUG   HandlerThread:25335 [meta.py:_save_patches():168] save patches done
+2022-08-25 12:57:41,617 DEBUG   HandlerThread:25335 [meta.py:_save_pip():54] save pip
+2022-08-25 12:57:41,618 DEBUG   HandlerThread:25335 [meta.py:_save_pip():68] save pip done
+2022-08-25 12:57:41,618 DEBUG   HandlerThread:25335 [meta.py:_save_conda():75] save conda
+2022-08-25 12:57:41,718 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/code/train.py
+2022-08-25 12:57:41,718 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch
+2022-08-25 12:57:41,718 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/requirements.txt
+2022-08-25 12:57:41,719 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/diff.patch
+2022-08-25 12:57:41,719 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/conda-environment.yaml
+2022-08-25 12:57:41,719 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/wandb-summary.json
+2022-08-25 12:57:41,719 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/code
+2022-08-25 12:58:01,698 DEBUG   HandlerThread:25335 [meta.py:_save_conda():85] save conda done
+2022-08-25 12:58:01,698 DEBUG   HandlerThread:25335 [meta.py:probe():254] probe done
+2022-08-25 12:58:01,727 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/conda-environment.yaml
+2022-08-25 12:58:01,727 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/wandb-metadata.json
+2022-08-25 12:58:01,844 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: stop_status
+2022-08-25 12:58:01,844 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: stop_status
+2022-08-25 12:58:01,847 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:01,847 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:01,847 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:01,847 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:02,204 DEBUG   SenderThread:25335 [sender.py:send():302] send: telemetry
+2022-08-25 12:58:02,205 DEBUG   SenderThread:25335 [sender.py:send():302] send: exit
+2022-08-25 12:58:02,205 INFO    SenderThread:25335 [sender.py:send_exit():438] handling exit code: 1
+2022-08-25 12:58:02,205 INFO    SenderThread:25335 [sender.py:send_exit():440] handling runtime: 20
+2022-08-25 12:58:02,206 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-08-25 12:58:02,207 INFO    SenderThread:25335 [sender.py:send_exit():446] send defer
+2022-08-25 12:58:02,207 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:02,207 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:02,207 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:02,207 DEBUG   SenderThread:25335 [sender.py:send():302] send: files
+2022-08-25 12:58:02,208 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file wandb-metadata.json with policy now
+2022-08-25 12:58:02,208 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file code/train.py with policy now
+2022-08-25 12:58:02,208 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,208 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 0
+2022-08-25 12:58:02,208 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file diff.patch with policy now
+2022-08-25 12:58:02,209 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch with policy now
+2022-08-25 12:58:02,209 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:02,209 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,209 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 0
+2022-08-25 12:58:02,211 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 1
+2022-08-25 12:58:02,212 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,212 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 1
+2022-08-25 12:58:02,265 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,266 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 1
+2022-08-25 12:58:02,266 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 2
+2022-08-25 12:58:02,266 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,266 DEBUG   SenderThread:25335 [sender.py:send():302] send: stats
+2022-08-25 12:58:02,266 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 2
+2022-08-25 12:58:02,267 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,267 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 2
+2022-08-25 12:58:02,267 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 3
+2022-08-25 12:58:02,267 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,267 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 3
+2022-08-25 12:58:02,267 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,267 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 3
+2022-08-25 12:58:02,267 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 4
+2022-08-25 12:58:02,267 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,267 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 4
+2022-08-25 12:58:02,267 DEBUG   SenderThread:25335 [sender.py:send():302] send: summary
+2022-08-25 12:58:02,268 INFO    SenderThread:25335 [sender.py:_save_file():1156] saving file wandb-summary.json with policy end
+2022-08-25 12:58:02,268 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,268 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 4
+2022-08-25 12:58:02,268 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 5
+2022-08-25 12:58:02,268 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,268 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 5
+2022-08-25 12:58:02,268 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,268 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 5
+2022-08-25 12:58:02,312 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:02,670 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 6
+2022-08-25 12:58:02,670 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:02,670 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:02,670 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 6
+2022-08-25 12:58:02,670 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:02,670 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 6
+2022-08-25 12:58:02,727 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/wandb-summary.json
+2022-08-25 12:58:02,727 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/config.yaml
+2022-08-25 12:58:02,727 INFO    Thread-12 :25335 [dir_watcher.py:_on_file_created():275] file/dir created: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/output.log
+2022-08-25 12:58:02,771 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:02,838 ERROR   Thread-17 :25335 [internal_api.py:upload_file():1875] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/tusuf/YOLOv5/15j4kvlk/code/train.py?Expires=1661500682&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=wVP6AC38QrzEBpUrdHzaqQgOEiJ8qpUVPx2UaahMFZEETLK%2BZ86yc60vV9za8UfVYj0TrxRGoH4LVqKYn72bl88664gKBHSWfFKejG0Q%2FlAAh%2F9FcliFHfpqlE%2FjLkgQuTPKLyCIwU%2FdN3yZQLCZTGnt5l7sFfH8vO2iQu6V7KxUnpbhTsqCCH1PvKsqmkbGcTsjbw8IxkFAe0wzHwvjcX16a3aDw71NanDMTZc3WvzR%2BcR2y2k4lFNySttnzDU4%2FWYdcng%2B9B7SI43QAULlYnC16GebQCGNjtZ6GqrimDwWngB9cRbBbycrWULjJ%2F5%2Bd%2FFJOSQiYntV9trNtH7E0A%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/tusuf/YOLOv5/15j4kvlk/code/train.py?Expires=1661500682&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=wVP6AC38QrzEBpUrdHzaqQgOEiJ8qpUVPx2UaahMFZEETLK%2BZ86yc60vV9za8UfVYj0TrxRGoH4LVqKYn72bl88664gKBHSWfFKejG0Q%2FlAAh%2F9FcliFHfpqlE%2FjLkgQuTPKLyCIwU%2FdN3yZQLCZTGnt5l7sFfH8vO2iQu6V7KxUnpbhTsqCCH1PvKsqmkbGcTsjbw8IxkFAe0wzHwvjcX16a3aDw71NanDMTZc3WvzR%2BcR2y2k4lFNySttnzDU4%2FWYdcng%2B9B7SI43QAULlYnC16GebQCGNjtZ6GqrimDwWngB9cRbBbycrWULjJ%2F5%2Bd%2FFJOSQiYntV9trNtH7E0A%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2022-08-25 12:58:02,839 ERROR   Thread-19 :25335 [internal_api.py:upload_file():1875] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/tusuf/YOLOv5/15j4kvlk/upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch?Expires=1661500682&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=N%2FI4ycTr2P347p6LQtyBieO5WFo1JyQ8uVh%2BRXSLadphQRC85FRG0mcGfsmH62Ph8UvjeH0gBBLiQQ1HyHKJHYUZeXuWF1Db8o24Re%2BbzmkRRRJVCVsuKjC%2Bz50%2BXXcE7ugADamaMaj31JBAuT71REtL57mhgx2iJmw1EVYXorUHhldG9Xdr9a1DmCUPvXl2e3ibXM3cStLn3TOEz49cdHt1e3WIAObgaGMEgMb2rLNCDyDDaCvgl5HnreKO6hk%2FY1TrMVVs0Gnos0YbMI2b7n1l8urmA7FJyC8oWw4K40MJROg3jp5ak8lRg%2BMkvHhcxsHF3qIVX2wtgrhKKOHorQ%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/tusuf/YOLOv5/15j4kvlk/upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch?Expires=1661500682&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=N%2FI4ycTr2P347p6LQtyBieO5WFo1JyQ8uVh%2BRXSLadphQRC85FRG0mcGfsmH62Ph8UvjeH0gBBLiQQ1HyHKJHYUZeXuWF1Db8o24Re%2BbzmkRRRJVCVsuKjC%2Bz50%2BXXcE7ugADamaMaj31JBAuT71REtL57mhgx2iJmw1EVYXorUHhldG9Xdr9a1DmCUPvXl2e3ibXM3cStLn3TOEz49cdHt1e3WIAObgaGMEgMb2rLNCDyDDaCvgl5HnreKO6hk%2FY1TrMVVs0Gnos0YbMI2b7n1l8urmA7FJyC8oWw4K40MJROg3jp5ak8lRg%2BMkvHhcxsHF3qIVX2wtgrhKKOHorQ%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2022-08-25 12:58:02,839 ERROR   Thread-17 :25335 [internal_api.py:upload_file():1877] upload_file request headers: {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '31028'}
+2022-08-25 12:58:02,839 ERROR   Thread-19 :25335 [internal_api.py:upload_file():1877] upload_file request headers: {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '1767'}
+2022-08-25 12:58:02,839 ERROR   Thread-17 :25335 [internal_api.py:upload_file():1879] upload_file response body: 
+2022-08-25 12:58:02,839 ERROR   Thread-19 :25335 [internal_api.py:upload_file():1879] upload_file response body: 
+2022-08-25 12:58:03,574 INFO    Thread-16 :25335 [upload_job.py:push():138] Uploaded file /tmp/tmpw5v28qi_wandb/3dcznumb-wandb-metadata.json
+2022-08-25 12:58:03,581 INFO    Thread-18 :25335 [upload_job.py:push():138] Uploaded file /tmp/tmpw5v28qi_wandb/1htdmmqh-diff.patch
+2022-08-25 12:58:04,221 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 7
+2022-08-25 12:58:04,221 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:04,224 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:04,224 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 7
+2022-08-25 12:58:04,224 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:04,225 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 7
+2022-08-25 12:58:04,225 INFO    SenderThread:25335 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-08-25 12:58:04,324 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:04,729 INFO    SenderThread:25335 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/output.log
+2022-08-25 12:58:04,730 INFO    SenderThread:25335 [dir_watcher.py:finish():392] scan: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files
+2022-08-25 12:58:04,731 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/wandb-metadata.json wandb-metadata.json
+2022-08-25 12:58:04,731 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch
+2022-08-25 12:58:04,731 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/config.yaml config.yaml
+2022-08-25 12:58:04,731 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/conda-environment.yaml conda-environment.yaml
+2022-08-25 12:58:04,732 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/wandb-summary.json wandb-summary.json
+2022-08-25 12:58:04,742 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/output.log output.log
+2022-08-25 12:58:04,742 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/diff.patch diff.patch
+2022-08-25 12:58:04,742 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/requirements.txt requirements.txt
+2022-08-25 12:58:04,746 INFO    SenderThread:25335 [dir_watcher.py:finish():406] scan save: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/code/train.py code/train.py
+2022-08-25 12:58:04,746 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 8
+2022-08-25 12:58:04,747 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:04,748 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:04,749 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 8
+2022-08-25 12:58:04,750 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:04,750 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 8
+2022-08-25 12:58:04,750 INFO    SenderThread:25335 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-25 12:58:04,848 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:04,850 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:04,884 INFO    Thread-19 :25335 [upload_job.py:push():138] Uploaded file /tmp/tmpw5v28qi_wandb/2kelqzbd-upstream_diff_1c9f91dbfdd6d3ba42cb0adb1d9c3ea8b38b8c13.patch
+2022-08-25 12:58:04,920 INFO    Thread-17 :25335 [upload_job.py:push():138] Uploaded file /tmp/tmpw5v28qi_wandb/2b5zvz8o-code/train.py
+2022-08-25 12:58:04,953 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:04,953 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,056 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,056 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,159 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,159 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,261 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,261 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,364 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,364 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,466 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,467 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,568 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,568 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,669 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,670 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,772 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,772 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,834 INFO    Thread-20 :25335 [upload_job.py:push():138] Uploaded file /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/config.yaml
+2022-08-25 12:58:05,875 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,875 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:05,899 INFO    Thread-21 :25335 [upload_job.py:push():138] Uploaded file /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/conda-environment.yaml
+2022-08-25 12:58:05,905 INFO    Thread-22 :25335 [upload_job.py:push():138] Uploaded file /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/wandb-summary.json
+2022-08-25 12:58:05,911 INFO    Thread-23 :25335 [upload_job.py:push():138] Uploaded file /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/output.log
+2022-08-25 12:58:05,916 INFO    Thread-24 :25335 [upload_job.py:push():138] Uploaded file /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/files/requirements.txt
+2022-08-25 12:58:05,978 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:05,979 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:06,081 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:06,082 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:06,117 INFO    Thread-11 (_thread_body):25335 [sender.py:transition_state():459] send defer: 9
+2022-08-25 12:58:06,118 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:06,118 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 9
+2022-08-25 12:58:06,118 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:06,119 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 9
+2022-08-25 12:58:06,184 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:06,406 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 10
+2022-08-25 12:58:06,406 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:06,407 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:06,407 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 10
+2022-08-25 12:58:06,407 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:06,407 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 10
+2022-08-25 12:58:06,408 INFO    SenderThread:25335 [sender.py:transition_state():459] send defer: 11
+2022-08-25 12:58:06,408 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: defer
+2022-08-25 12:58:06,408 DEBUG   SenderThread:25335 [sender.py:send():302] send: final
+2022-08-25 12:58:06,409 INFO    HandlerThread:25335 [handler.py:handle_request_defer():164] handle defer: 11
+2022-08-25 12:58:06,409 DEBUG   SenderThread:25335 [sender.py:send():302] send: footer
+2022-08-25 12:58:06,409 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: defer
+2022-08-25 12:58:06,409 INFO    SenderThread:25335 [sender.py:send_request_defer():455] handle sender defer: 11
+2022-08-25 12:58:06,508 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: poll_exit
+2022-08-25 12:58:06,508 DEBUG   SenderThread:25335 [sender.py:send_request():316] send_request: poll_exit
+2022-08-25 12:58:06,508 INFO    SenderThread:25335 [file_pusher.py:join():176] waiting for file pusher
+2022-08-25 12:58:07,342 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: sampled_history
+2022-08-25 12:58:07,343 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: get_summary
+2022-08-25 12:58:07,343 INFO    MainThread:25335 [wandb_run.py:_footer_history_summary_info():3304] rendering history
+2022-08-25 12:58:07,343 INFO    MainThread:25335 [wandb_run.py:_footer_history_summary_info():3336] rendering summary
+2022-08-25 12:58:07,343 INFO    MainThread:25335 [wandb_run.py:_footer_sync_info():3260] logging synced files
+2022-08-25 12:58:07,343 DEBUG   HandlerThread:25335 [handler.py:handle_request():141] handle_request: shutdown
+2022-08-25 12:58:07,343 INFO    HandlerThread:25335 [handler.py:finish():810] shutting down handler
+2022-08-25 12:58:07,409 INFO    WriterThread:25335 [datastore.py:close():279] close: /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/run-15j4kvlk.wandb
+2022-08-25 12:58:08,242 INFO    SenderThread:25335 [sender.py:finish():1312] shutting down sender
+2022-08-25 12:58:08,242 INFO    SenderThread:25335 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-25 12:58:08,242 INFO    SenderThread:25335 [file_pusher.py:join():176] waiting for file pusher
+2022-08-25 12:58:08,347 INFO    MainThread:25335 [internal.py:handle_exit():80] Internal process exited

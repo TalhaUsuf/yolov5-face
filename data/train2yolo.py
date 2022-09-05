@@ -4,8 +4,8 @@ import torch
 import torch.utils.data as data
 import cv2
 import numpy as np
-
-
+from rich.console import Console
+from tqdm import trange
 class WiderFaceDetection(data.Dataset):
     def __init__(self, txt_path, preproc=None):
         self.preproc = preproc
@@ -128,9 +128,10 @@ if __name__ == '__main__':
         exit(1)
 
     aa = WiderFaceDetection(os.path.join(original_path, 'label.txt'))
-
-    for i in range(len(aa.imgs_path)):
-        print(i, aa.imgs_path[i])
+    Console().print(f"total images:  :zap: {len(aa.imgs_path)}")
+    # Console().print([f for f in aa.imgs_path])
+    for i in trange(len(aa.imgs_path), colour="green"):
+        # print(i, aa.imgs_path[i])
         img = cv2.imread(aa.imgs_path[i])
         base_img = os.path.basename(aa.imgs_path[i])
         base_txt = os.path.basename(aa.imgs_path[i])[:-4] + ".txt"

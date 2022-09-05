@@ -327,13 +327,8 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
         lr = [x['lr'] for x in optimizer.param_groups]  # for tensorboard
         scheduler.step()
 
-
-        # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        #                    ⚡ actual saving happens here ⚡
-        # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
         # DDP process 0 or single-GPU
-        if rank in [-1, 0] and epoch > 0:
+        if rank in [-1, 0] and epoch > 20:
             # mAP
             if ema:
                 ema.update_attr(model, include=['yaml', 'nc', 'hyp', 'gr', 'names', 'stride', 'class_weights'])
@@ -372,8 +367,7 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                 best_fitness = fi
 
             # Save model
-            # save = (not opt.nosave) or (final_epoch and not opt.evolve)
-            save = True
+            save = (not opt.nosave) or (final_epoch and not opt.evolve)
             if save:
                 with open(results_file, 'r') as f:  # create checkpoint
                     ckpt = {'epoch': epoch,
@@ -384,7 +378,6 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                             'wandb_id': wandb_run.id if wandb else None}
 
                 # Save last, best and delete
-                torch.save(ckpt, Path(wdir, f"epoch{epoch}.pt"))
                 torch.save(ckpt, last)
                 if best_fitness == fi:
                     torch.save(ckpt, best)

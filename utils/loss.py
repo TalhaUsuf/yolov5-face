@@ -5,7 +5,7 @@ import torch.nn as nn
 import numpy as np
 from utils.general import bbox_iou
 from utils.torch_utils import is_parallel
-
+from rich.console import Console
 
 def smooth_BCE(eps=0.1):  # https://github.com/ultralytics/yolov3/issues/238#issuecomment-598028441
     # return positive, negative label smoothing BCE targets
@@ -245,6 +245,9 @@ def build_targets(p, targets, model):
 
         # Append
         a = t[:, 16].long()  # anchor indices
+        # Console().print(f" :gear: {b.dtype} {a.dtype}")
+        # Console().print(f" :gear: {gj.clamp_(0.0, gain[3] - 1).dtype}")
+        # Console().print(f" :gear: {(gain[3] - 1).dtype}")
         indices.append((b, a, gj.clamp_(0, gain[3] - 1), gi.clamp_(0, gain[2] - 1)))  # image, anchor, grid indices
         tbox.append(torch.cat((gxy - gij, gwh), 1))  # box
         anch.append(anchors[a])  # anchors

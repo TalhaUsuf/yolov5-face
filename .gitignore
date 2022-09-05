@@ -1,1 +1,11 @@
 */__pycache__
+.idea/
+*.pt
+dataset
+__pycache__
+dataset
+YOLOFACE
+wandb
+runs/*
+wandb/*
+/wandb/

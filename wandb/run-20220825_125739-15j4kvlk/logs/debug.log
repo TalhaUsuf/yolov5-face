@@ -1,0 +1,26 @@
+2022-08-25 12:57:39,409 INFO    MainThread:23639 [wandb_setup.py:_flush():76] Configure stats pid to 23639
+2022-08-25 12:57:39,409 INFO    MainThread:23639 [wandb_setup.py:_flush():76] Loading settings from /home/talha/.config/wandb/settings
+2022-08-25 12:57:39,409 INFO    MainThread:23639 [wandb_setup.py:_flush():76] Loading settings from /home/talha/oneTB/yolov5-face/wandb/settings
+2022-08-25 12:57:39,409 INFO    MainThread:23639 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'_require_service': 'True'}
+2022-08-25 12:57:39,409 INFO    MainThread:23639 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/home/talha/oneTB/yolov5-face/train.py'}
+2022-08-25 12:57:39,410 INFO    MainThread:23639 [wandb_init.py:_log_setup():461] Logging user logs to /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/logs/debug.log
+2022-08-25 12:57:39,410 INFO    MainThread:23639 [wandb_init.py:_log_setup():462] Logging internal logs to /home/talha/oneTB/yolov5-face/wandb/run-20220825_125739-15j4kvlk/logs/debug-internal.log
+2022-08-25 12:57:39,410 INFO    MainThread:23639 [wandb_init.py:init():495] calling init triggers
+2022-08-25 12:57:39,410 INFO    MainThread:23639 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'weights': 'pretrained models', 'cfg': 'models/yolov5s.yaml', 'data': 'data/widerface.yaml', 'hyp': {'lr0': 0.01, 'lrf': 0.2, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'landmark': 0.005, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.5, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 0.5, 'mixup': 0.0}, 'epochs': 250, 'batch_size': 16, 'img_size': [800, 800], 'rect': False, 'resume': False, 'nosave': False, 'notest': False, 'noautoanchor': False, 'evolve': False, 'bucket': '', 'cache_images': False, 'image_weights': False, 'device': '', 'multi_scale': False, 'single_cls': False, 'adam': False, 'sync_bn': False, 'local_rank': -1, 'log_imgs': 16, 'log_artifacts': False, 'workers': 4, 'project': 'runs/train', 'name': 'exp', 'exist_ok': False, 'total_batch_size': 16, 'world_size': 1, 'global_rank': -1, 'save_dir': 'runs/train/exp2'}
+2022-08-25 12:57:39,410 INFO    MainThread:23639 [wandb_init.py:init():548] starting backend
+2022-08-25 12:57:39,411 INFO    MainThread:23639 [wandb_init.py:init():552] setting up manager
+2022-08-25 12:57:39,463 INFO    MainThread:23639 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-08-25 12:57:39,468 INFO    MainThread:23639 [wandb_init.py:init():558] backend started and connected
+2022-08-25 12:57:39,475 INFO    MainThread:23639 [wandb_init.py:init():636] updated telemetry
+2022-08-25 12:57:39,478 INFO    MainThread:23639 [wandb_init.py:init():667] communicating run to backend with 30 second timeout
+2022-08-25 12:57:40,703 INFO    MainThread:23639 [wandb_run.py:_on_init():1981] communicating current version
+2022-08-25 12:57:41,450 INFO    MainThread:23639 [wandb_run.py:_on_init():1985] got version response upgrade_message: "wandb version 0.13.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-08-25 12:57:41,450 INFO    MainThread:23639 [wandb_init.py:init():700] starting run threads in backend
+2022-08-25 12:57:46,479 INFO    MainThread:23639 [wandb_run.py:_console_start():1961] atexit reg
+2022-08-25 12:57:46,479 INFO    MainThread:23639 [wandb_run.py:_redirect():1819] redirect: SettingsConsole.WRAP_RAW
+2022-08-25 12:57:46,480 INFO    MainThread:23639 [wandb_run.py:_redirect():1884] Wrapping output streams.
+2022-08-25 12:57:46,480 INFO    MainThread:23639 [wandb_run.py:_redirect():1906] Redirects installed.
+2022-08-25 12:57:46,481 INFO    MainThread:23639 [wandb_init.py:init():732] run started, returning control to user process
+2022-08-25 12:58:08,345 WARNING MsgRouterThr:23639 [router.py:message_loop():76] message_loop has been closed
