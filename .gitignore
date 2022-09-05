@@ -10,3 +10,4 @@ runs/*
 wandb/*
 /wandb/
 /sclblonnx/
+/frame.jpg
